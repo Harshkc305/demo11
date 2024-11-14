@@ -1,0 +1,198 @@
+
+/* .loader{
+    background-image: linear-gradient(292deg, rgba(150, 150, 150, 0.03) 0%, rgba(150, 150, 150, 0.03) 20%,rgba(151, 151, 151, 0.03) 20%, rgba(151, 151, 151, 0.03) 40%,rgba(215, 215, 215, 0.03) 40%, rgba(215, 215, 215, 0.03) 60%,rgba(254, 254, 254, 0.03) 60%, rgba(254, 254, 254, 0.03) 80%,rgba(112, 112, 112, 0.03) 80%, rgba(112, 112, 112, 0.03) 100%),linear-gradient(62deg, rgba(34, 34, 34, 0.03) 0%, rgba(34, 34, 34, 0.03) 20%,rgba(171, 171, 171, 0.03) 20%, rgba(171, 171, 171, 0.03) 40%,rgba(206, 206, 206, 0.03) 40%, rgba(206, 206, 206, 0.03) 60%,rgba(210, 210, 210, 0.03) 60%, rgba(210, 210, 210, 0.03) 80%,rgba(69, 69, 69, 0.03) 80%, rgba(69, 69, 69, 0.03) 100%),linear-gradient(314deg, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 20%,rgba(254, 254, 254, 0.03) 20%, rgba(254, 254, 254, 0.03) 40%,rgba(178, 178, 178, 0.03) 40%, rgba(178, 178, 178, 0.03) 60%,rgba(211, 211, 211, 0.03) 60%, rgba(211, 211, 211, 0.03) 80%,rgba(73, 73, 73, 0.03) 80%, rgba(73, 73, 73, 0.03) 100%),linear-gradient(32deg, rgba(182, 182, 182, 0.01) 0%, rgba(182, 182, 182, 0.01) 12.5%,rgba(208, 208, 208, 0.01) 12.5%, rgba(208, 208, 208, 0.01) 25%,rgba(178, 178, 178, 0.01) 25%, rgba(178, 178, 178, 0.01) 37.5%,rgba(143, 143, 143, 0.01) 37.5%, rgba(143, 143, 143, 0.01) 50%,rgba(211, 211, 211, 0.01) 50%, rgba(211, 211, 211, 0.01) 62.5%,rgba(92, 92, 92, 0.01) 62.5%, rgba(92, 92, 92, 0.01) 75%,rgba(56, 56, 56, 0.01) 75%, rgba(56, 56, 56, 0.01) 87.5%,rgba(253, 253, 253, 0.01) 87.5%, rgba(253, 253, 253, 0.01) 100%),linear-gradient(247deg, rgba(103, 103, 103, 0.02) 0%, rgba(103, 103, 103, 0.02) 12.5%,rgba(240, 240, 240, 0.02) 12.5%, rgba(240, 240, 240, 0.02) 25%,rgba(18, 18, 18, 0.02) 25%, rgba(18, 18, 18, 0.02) 37.5%,rgba(38, 38, 38, 0.02) 37.5%, rgba(38, 38, 38, 0.02) 50%,rgba(246, 246, 246, 0.02) 50%, rgba(246, 246, 246, 0.02) 62.5%,rgba(9, 9, 9, 0.02) 62.5%, rgba(9, 9, 9, 0.02) 75%,rgba(167, 167, 167, 0.02) 75%, rgba(167, 167, 167, 0.02) 87.5%,rgba(86, 86, 86, 0.02) 87.5%, rgba(86, 86, 86, 0.02) 100%),linear-gradient(90deg, hsl(194,0%,10%),hsl(194,0%,10%));
+    display: flex;
+    justify-content: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+} */
+
+
+
+/* .spinner {
+    
+    background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+    width: 100px;
+    height: 100px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+  }
+  
+  .spinner1 {
+    
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    filter: blur(10px);
+  }
+  
+  @keyframes spinning82341 {
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+
+  /* From Uiverse.io by mobinkakei */ 
+.loader {
+    --path: #2f3545;
+    --dot: #5628ee;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+  }
+  
+  .loader:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+      infinite;
+  }
+  
+  .loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader svg rect,
+  .loader svg polygon,
+  .loader svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  
+  .loader svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+      infinite;
+  }
+  
+  .loader svg rect {
+    stroke-dasharray: 192 64 192 64;
+    stroke-dashoffset: 0;
+    animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg circle {
+    stroke-dasharray: 150 50 150 50;
+    stroke-dashoffset: 75;
+    animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+      infinite;
+  }
+  
+  .loader.triangle {
+    width: 48px;
+  }
+  
+  .loader.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+      infinite;
+  }
+  
+  @keyframes pathTriangle {
+    33% {
+      stroke-dashoffset: 74;
+    }
+  
+    66% {
+      stroke-dashoffset: 147;
+    }
+  
+    100% {
+      stroke-dashoffset: 221;
+    }
+  }
+  
+  @keyframes dotTriangle {
+    33% {
+      transform: translate(0, 0);
+    }
+  
+    66% {
+      transform: translate(10px, -18px);
+    }
+  
+    100% {
+      transform: translate(-10px, -18px);
+    }
+  }
+  
+  @keyframes pathRect {
+    25% {
+      stroke-dashoffset: 64;
+    }
+  
+    50% {
+      stroke-dashoffset: 128;
+    }
+  
+    75% {
+      stroke-dashoffset: 192;
+    }
+  
+    100% {
+      stroke-dashoffset: 256;
+    }
+  }
+  
+  @keyframes dotRect {
+    25% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(18px, -18px);
+    }
+  
+    75% {
+      transform: translate(0, -36px);
+    }
+  
+    100% {
+      transform: translate(-18px, -18px);
+    }
+  }
+  
+  @keyframes pathCircle {
+    25% {
+      stroke-dashoffset: 125;
+    }
+  
+    50% {
+      stroke-dashoffset: 175;
+    }
+  
+    75% {
+      stroke-dashoffset: 225;
+    }
+  
+    100% {
+      stroke-dashoffset: 275;
+    }
+  }
+  
+  .loader {
+    display: inline-block;
+    margin: 0 16px;
+  }
+  
